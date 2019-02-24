@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF3D18772176DECD00E5B21C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D18762176DECD00E5B21C /* AppDelegate.m */; };
+		EF3D187F2176DECE00E5B21C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3D187E2176DECE00E5B21C /* Assets.xcassets */; };
+		EF3D18822176DECE00E5B21C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3D18802176DECE00E5B21C /* LaunchScreen.storyboard */; };
+		EF3D18852176DECE00E5B21C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D18842176DECE00E5B21C /* main.m */; };
+		EF3D188D2176DF2000E5B21C /* DCFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D188C2176DF2000E5B21C /* DCFViewController.m */; };
+		EF3D18902176DF2600E5B21C /* DCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D188F2176DF2600E5B21C /* DCSViewController.m */; };
+		EF3D18932176DF2F00E5B21C /* DCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D18922176DF2F00E5B21C /* DCTViewController.m */; };
+		EF3D189A2176E16500E5B21C /* DCSlideTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D18992176E16500E5B21C /* DCSlideTabBarController.m */; };
+		EF3D18A02176E7BE00E5B21C /* DCSlideBarViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3D189F2176E7BE00E5B21C /* DCSlideBarViewAnimation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF3D18722176DECD00E5B21C /* CDDSlideTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDSlideTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3D18752176DECD00E5B21C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF3D18762176DECD00E5B21C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF3D187E2176DECE00E5B21C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF3D18812176DECE00E5B21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF3D18832176DECE00E5B21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3D18842176DECE00E5B21C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF3D188B2176DF2000E5B21C /* DCFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFViewController.h; sourceTree = "<group>"; };
+		EF3D188C2176DF2000E5B21C /* DCFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCFViewController.m; sourceTree = "<group>"; };
+		EF3D188E2176DF2600E5B21C /* DCSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSViewController.h; sourceTree = "<group>"; };
+		EF3D188F2176DF2600E5B21C /* DCSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSViewController.m; sourceTree = "<group>"; };
+		EF3D18912176DF2F00E5B21C /* DCTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTViewController.h; sourceTree = "<group>"; };
+		EF3D18922176DF2F00E5B21C /* DCTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTViewController.m; sourceTree = "<group>"; };
+		EF3D18982176E16500E5B21C /* DCSlideTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSlideTabBarController.h; sourceTree = "<group>"; };
+		EF3D18992176E16500E5B21C /* DCSlideTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSlideTabBarController.m; sourceTree = "<group>"; };
+		EF3D189E2176E7BE00E5B21C /* DCSlideBarViewAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCSlideBarViewAnimation.h; sourceTree = "<group>"; };
+		EF3D189F2176E7BE00E5B21C /* DCSlideBarViewAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCSlideBarViewAnimation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3D186F2176DECD00E5B21C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3D18692176DECD00E5B21C = {
+			isa = PBXGroup;
+			children = (
+				EF3D18742176DECD00E5B21C /* CDDSlideTabBarDemo */,
+				EF3D18732176DECD00E5B21C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF3D18732176DECD00E5B21C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D18722176DECD00E5B21C /* CDDSlideTabBarDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF3D18742176DECD00E5B21C /* CDDSlideTabBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D18752176DECD00E5B21C /* AppDelegate.h */,
+				EF3D18762176DECD00E5B21C /* AppDelegate.m */,
+				EF3D189E2176E7BE00E5B21C /* DCSlideBarViewAnimation.h */,
+				EF3D189F2176E7BE00E5B21C /* DCSlideBarViewAnimation.m */,
+				EF3D18982176E16500E5B21C /* DCSlideTabBarController.h */,
+				EF3D18992176E16500E5B21C /* DCSlideTabBarController.m */,
+				EF3D18942176DF7400E5B21C /* Controller */,
+				EF3D187E2176DECE00E5B21C /* Assets.xcassets */,
+				EF3D18802176DECE00E5B21C /* LaunchScreen.storyboard */,
+				EF3D18832176DECE00E5B21C /* Info.plist */,
+				EF3D18842176DECE00E5B21C /* main.m */,
+			);
+			path = CDDSlideTabBarDemo;
+			sourceTree = "<group>";
+		};
+		EF3D18942176DF7400E5B21C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D188B2176DF2000E5B21C /* DCFViewController.h */,
+				EF3D188C2176DF2000E5B21C /* DCFViewController.m */,
+				EF3D188E2176DF2600E5B21C /* DCSViewController.h */,
+				EF3D188F2176DF2600E5B21C /* DCSViewController.m */,
+				EF3D18912176DF2F00E5B21C /* DCTViewController.h */,
+				EF3D18922176DF2F00E5B21C /* DCTViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF3D18712176DECD00E5B21C /* CDDSlideTabBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3D18882176DECE00E5B21C /* Build configuration list for PBXNativeTarget "CDDSlideTabBarDemo" */;
+			buildPhases = (
+				EF3D186E2176DECD00E5B21C /* Sources */,
+				EF3D186F2176DECD00E5B21C /* Frameworks */,
+				EF3D18702176DECD00E5B21C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CDDSlideTabBarDemo;
+			productName = CDDSlideTabBarDemo;
+			productReference = EF3D18722176DECD00E5B21C /* CDDSlideTabBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF3D186A2176DECD00E5B21C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DC;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SnailChen;
+				TargetAttributes = {
+					EF3D18712176DECD00E5B21C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EF3D186D2176DECD00E5B21C /* Build configuration list for PBXProject "CDDSlideTabBarDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF3D18692176DECD00E5B21C;
+			productRefGroup = EF3D18732176DECD00E5B21C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF3D18712176DECD00E5B21C /* CDDSlideTabBarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF3D18702176DECD00E5B21C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3D18822176DECE00E5B21C /* LaunchScreen.storyboard in Resources */,
+				EF3D187F2176DECE00E5B21C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3D186E2176DECD00E5B21C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3D18852176DECE00E5B21C /* main.m in Sources */,
+				EF3D188D2176DF2000E5B21C /* DCFViewController.m in Sources */,
+				EF3D189A2176E16500E5B21C /* DCSlideTabBarController.m in Sources */,
+				EF3D18772176DECD00E5B21C /* AppDelegate.m in Sources */,
+				EF3D18A02176E7BE00E5B21C /* DCSlideBarViewAnimation.m in Sources */,
+				EF3D18932176DF2F00E5B21C /* DCTViewController.m in Sources */,
+				EF3D18902176DF2600E5B21C /* DCSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF3D18802176DECE00E5B21C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3D18812176DECE00E5B21C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF3D18862176DECE00E5B21C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF3D18872176DECE00E5B21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF3D18892176DECE00E5B21C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8JH3684Z4;
+				INFOPLIST_FILE = CDDSlideTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Snail.CDDSlideTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF3D188A2176DECE00E5B21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8JH3684Z4;
+				INFOPLIST_FILE = CDDSlideTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Snail.CDDSlideTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3D186D2176DECD00E5B21C /* Build configuration list for PBXProject "CDDSlideTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3D18862176DECE00E5B21C /* Debug */,
+				EF3D18872176DECE00E5B21C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3D18882176DECE00E5B21C /* Build configuration list for PBXNativeTarget "CDDSlideTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3D18892176DECE00E5B21C /* Debug */,
+				EF3D188A2176DECE00E5B21C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF3D186A2176DECD00E5B21C /* Project object */;
+}
