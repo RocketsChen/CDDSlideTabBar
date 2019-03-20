@@ -45,7 +45,11 @@
     self.delegate = self;
     
     [self addChildViewContorller];
+    
 }
+
+
+
 
 
 #pragma mark - 添加子控制器
@@ -76,12 +80,33 @@
         item.selectedImage = [[UIImage imageNamed:dict[MallSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         item.imageInsets = UIEdgeInsetsMake(6, 0,-6, 0);//（当只有图片的时候）需要自动调整
         [self addChildViewController:nav];
+        
+        if (idx == childArray.count - 1) { //初始化完TabBar（这里判断只是为了防止重复设置）只初始化一次
+            UITabBar *tabBar = nav.tabBarController.tabBar;
+            [tabBar setSelectionIndicatorImage:[self drawImageWithColor:[UIColor darkGrayColor]  itemSize:CGSizeMake(tabBar.frame.size.width / nav.tabBarController.childViewControllers.count, tabBar.frame.size.height)]];
+        }
     }];
 }
 
+#pragma mark - 根据Item绘制每个选中的背景颜色
+- (UIImage *)drawImageWithColor:(UIColor *)color itemSize:(CGSize)size {
+    
+    if (!color || size.width <= 0 || size.height <= 0) return nil;
+    
+    CGRect itemRect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(itemRect.size, NO, 0); //开始绘制
+    CGContextRef contRef = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(contRef, color.CGColor);
+    CGContextFillRect(contRef, itemRect);
+    UIImage *selectBgImage = UIGraphicsGetImageFromCurrentImageContext(); //绘图
+    UIGraphicsEndImageContext(); //结束绘制
+    
+    return selectBgImage;
+}
 
 
-#pragma mark - 点击动画
+#pragma mark - 点击动画_scrollsItems    bool    false
 - (void)tabBarButtonClick:(UIControl *)tabBarButton
 {
     for (UIView *imageView in tabBarButton.subviews) {
@@ -113,9 +138,8 @@
 
 
 #pragma mark - <UITabBarControllerDelegate>
-
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    
+
     [self tabBarButtonClick:[self getTabBarButton]]; //点击tabBarItem动画代理
 }
 

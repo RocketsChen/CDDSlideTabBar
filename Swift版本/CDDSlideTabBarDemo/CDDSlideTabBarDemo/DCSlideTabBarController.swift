@@ -13,6 +13,7 @@ class DCSlideTabBarController: UITabBarController{
     
     
     // MARK: - LazyLoad
+    var currentChildVc : UIViewController?
     
     
     // MARK: - LifeCycle
@@ -72,7 +73,8 @@ extension DCSlideTabBarController {
 //            guard let title = result["title"] as? String else { continue }
             
             let childVc = getVcFromString(vcName)
-
+            currentChildVc = childVc
+            
             childVc.tabBarItem.image = UIImage(named: normalImg)
             childVc.tabBarItem.selectedImage = UIImage(named: selImg)
             childVc.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0) //只有图片的时候需要设置 大致偏移6px
@@ -80,7 +82,17 @@ extension DCSlideTabBarController {
             
             let childNav = UINavigationController(rootViewController: childVc)
             
-            addChild(childNav)
+            addChildViewController(childNav)
+
+        }
+        
+        if let currentChildVc = currentChildVc { // 处理tabBarItem 选中颜色
+            let tabBar = currentChildVc.tabBarController?.tabBar
+            let tabBarWidth = tabBar?.frame.size.width ?? 0
+            let tabBarHeight = tabBar?.frame.size.height ?? 0
+            let childCount = CGFloat(currentChildVc.tabBarController?.childViewControllers.count ?? 0)
+            
+            tabBar?.selectionIndicatorImage = drawImageWithColor(color: UIColor.darkGray, size: CGSize(width: tabBarWidth / childCount, height: tabBarHeight))
         }
     }
     
@@ -103,6 +115,24 @@ extension DCSlideTabBarController {
         }
         
         return childVcType.init()
+    }
+    
+    
+    /// 绘制选中Item的背景色
+    private func drawImageWithColor(color : UIColor , size : CGSize) -> UIImage {
+        guard  size.width > 0 && size.height > 0  else {
+            return UIImage()
+        }
+        let itemRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(itemRect.size, false, 0) //开始绘制
+        let contRef : CGContext = UIGraphicsGetCurrentContext()!;
+        
+        contRef.setFillColor(color.cgColor);
+        contRef.fill(itemRect);
+        let selectBgImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage(); //绘图
+        UIGraphicsEndImageContext(); //结束绘制
+        
+        return selectBgImage
     }
 }
 
@@ -142,7 +172,7 @@ extension DCSlideTabBarController : UITabBarControllerDelegate {
                 let animation = CAKeyframeAnimation()
                 animation.keyPath = "transform.scale"
                 animation.duration = 0.3
-                animation.calculationMode = CAAnimationCalculationMode.cubicPaced
+                animation.calculationMode = "cubicPaced"
                 animation.values = [1.0,1.1,0.9,1.0]
                 imageView.layer.add(animation, forKey: nil)
             }
