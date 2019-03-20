@@ -3,7 +3,7 @@
 
 ####本次更新：新增tabBar选中背景色设置
 
-![GIF动图](https://ws1.sinaimg.cn/large/006tKfTcgy1g19cvyctswg30a006oagu.gif)
+![GIF动图](https://ws3.sinaimg.cn/large/006tKfTcgy1g19dk67jn3g30a006oqav.gif)
 
 
 #####博客：
