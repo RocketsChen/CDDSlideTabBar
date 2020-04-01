@@ -13,7 +13,8 @@ class DCSlideTabBarController: UITabBarController{
     
     
     // MARK: - LazyLoad
-    var currentChildVc : UIViewController?
+    var currentChildVc: UIViewController?
+    var areaInsets: CGFloat = 0.0
     
     
     // MARK: - LifeCycle
@@ -34,6 +35,9 @@ extension DCSlideTabBarController {
         view.backgroundColor = .white
         
         self.delegate = self
+        
+        /// 安全距离的简单判断
+        areaInsets = (UIScreen.main.bounds.size.height >= 812) ? 34.0 : 0
     }
 }
 
@@ -82,17 +86,22 @@ extension DCSlideTabBarController {
             
             let childNav = UINavigationController(rootViewController: childVc)
             
-            addChildViewController(childNav)
+            addChild(childNav)
 
         }
         
         if let currentChildVc = currentChildVc { // 处理tabBarItem 选中颜色
-            let tabBar = currentChildVc.tabBarController?.tabBar
-            let tabBarWidth = tabBar?.frame.size.width ?? 0
-            let tabBarHeight = tabBar?.frame.size.height ?? 0
-            let childCount = CGFloat(currentChildVc.tabBarController?.childViewControllers.count ?? 0)
+            guard let tabBar = currentChildVc.tabBarController?.tabBar else {
+                return
+            }
+            guard let count = currentChildVc.tabBarController?.children.count else {
+                return
+            }
+            let tabBarWidth = tabBar.frame.size.width
+            let tabBarHeight = tabBar.frame.size.height
+            let childCount = CGFloat(count)
             
-            tabBar?.selectionIndicatorImage = drawImageWithColor(color: UIColor.darkGray, size: CGSize(width: tabBarWidth / childCount, height: tabBarHeight))
+            tabBar.selectionIndicatorImage = drawImageWithColor(color: UIColor.darkGray, size: CGSize(width: tabBarWidth / childCount, height: tabBarHeight + areaInsets))
         }
     }
     
@@ -172,13 +181,12 @@ extension DCSlideTabBarController : UITabBarControllerDelegate {
                 let animation = CAKeyframeAnimation()
                 animation.keyPath = "transform.scale"
                 animation.duration = 0.3
-                animation.calculationMode = "cubicPaced"
+                animation.calculationMode = CAAnimationCalculationMode(rawValue: "cubicPaced")
                 animation.values = [1.0,1.1,0.9,1.0]
                 imageView.layer.add(animation, forKey: nil)
             }
         }
     }
     
-
 }
 

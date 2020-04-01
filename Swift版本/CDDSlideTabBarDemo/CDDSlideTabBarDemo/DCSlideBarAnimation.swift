@@ -28,8 +28,8 @@ extension DCSlideBarAnimation : UIViewControllerAnimatedTransitioning{
         
     
         guard let tabVc = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController,
-              let fromeIndex = tabVc.viewControllers?.index(where: { $0 == fromeVc}),
-              let toIndex = tabVc.viewControllers?.index(where: { $0 == toVc}) else { return }
+            let fromeIndex = tabVc.viewControllers?.firstIndex(where: { $0 == fromeVc}),
+            let toIndex = tabVc.viewControllers?.firstIndex(where: { $0 == toVc}) else { return }
         
         guard let formView = transitionContext.view(forKey: .from),
               let toView = transitionContext.view(forKey: .to) else { return }
